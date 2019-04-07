@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="mb-30">&nbsp;</div>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page"> <a routerLink="/products"> Products </a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{product.title}}</li>
+
+    </ol>
+  </nav>
+  
+  <div class="row">
+
+    <div class="col-lg-8 col-sm-8 col-xs-8 mt-3">
+    	
+    	<h2>{{product.title}}</h2>
+  		<p>{{product.price}}$</p>
+
+      <div class="card bg-dark text-white">
+        <img height="" class="card-img-top" src="{{product.image}}" alt="{{product.title}}">
+        <div class="card-body">
+          <p [innerHTML]="product.description"></p>
+          <a class="btn btn-secondary">Add to cart</a>
+          <a class="btn btn-secondary ml-3" (click)="goBack()">Go back</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-4 col-xs-4 mt-3">
+    	<h2>Related products</h2>
+    	<p>&nbsp;</p>
+
+    	<div class="card">
+    		<img height="" class="card-img-top" src="{{product.image}}" alt="{{product.title}}">
+    		<div class="card-body">
+    			<h3>{{product.title}}</h3>
+    		</div>
+    	</div>
+
+    	<div class="card">
+    		<img height="" class="card-img-top" src="{{product.image}}" alt="{{product.title}}">
+    		<div class="card-body">
+    			<h3>{{product.title}}</h3>
+    		</div>
+    	</div>
+
+    	<div class="card">
+    		<img height="" class="card-img-top" src="{{product.image}}" alt="{{product.title}}">
+    		<div class="card-body">
+    			<h3>{{product.title}}</h3>
+    		</div>
+    	</div>
+
+
+
+    </div>
+  
+  </div>
+
+  <div class="mb-30">&nbsp;</div>
+
+</div>
+
+
+<router-outlet></router-outlet>
