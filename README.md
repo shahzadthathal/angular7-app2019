@@ -1,5 +1,8 @@
 # Angular 7 App 2019
 
+
+<img src="Angular%207%20App%202019.png" width="100%" title="Angular 7 App 2019">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
