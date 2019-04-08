@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { ApiService } from '../services/api.service';
 import { Product } from '../models/product';
@@ -12,7 +11,8 @@ import { Product } from '../models/product';
 })
 export class ProductsComponent implements OnInit {
 
- 	private products : Product[] = []; 
+ 	//private products : Product[] = []; 
+ 	private products: Product[];
 
   	constructor(private apiService: ApiService) { }
 
@@ -20,10 +20,16 @@ export class ProductsComponent implements OnInit {
 
   	ngOnInit() {
 
-  		this.apiService.getProducts().subscribe((res : Product[])=>{
-			console.log(res);
-            this.products = res;
-        });
+  		this.getProducts();
+
+  		//this.apiService.getProducts().subscribe((res : Product[])=>{
+		//	console.log(res);
+         //   this.products = res;
+        //});
+  	}
+
+  	getProducts(): void {
+    	this.apiService.getProducts().subscribe(products => this.products = products);
   	}
 
 
