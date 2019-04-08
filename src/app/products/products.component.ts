@@ -12,7 +12,7 @@ import { Product } from '../models/product';
 export class ProductsComponent implements OnInit {
 
  	//private products : Product[] = []; 
- 	private products: Product[];
+ 	products: Product[];
 
   	constructor(private apiService: ApiService) { }
 
